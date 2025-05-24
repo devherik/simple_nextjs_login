@@ -2,8 +2,9 @@
 import { redirect } from "next/navigation";
 
 export async function getLogin(formData: FormData) {
-    const email = formData.get("email");
+    const name = formData.get("name");
     const password = formData.get("password");
-
-    redirect("/dashboard");
+    // logic to login and get the user id
+    const data = {id: name};
+    redirect(`/dashboard/${data.id}`);
 }
