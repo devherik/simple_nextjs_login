@@ -6,5 +6,5 @@ export async function getLogin(formData: FormData) {
     const password = formData.get("password");
     // logic to login and get the user id
     const data = {id: name};
-    redirect(`/dashboard/${data.id}`);
+    redirect(`/pages/dashboard/${data.id}`);
 }

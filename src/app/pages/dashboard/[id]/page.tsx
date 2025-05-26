@@ -3,5 +3,5 @@ export default async function Dashboard({
 }: {
   params: Promise<{ id: string }>;
 }) {
-  return <div>Dashboard</div>;
+  return <div>Dashboard {(await params).id} </div>;
 }
